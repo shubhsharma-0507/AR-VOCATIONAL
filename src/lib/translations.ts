@@ -1,4 +1,4 @@
-export type Language = 'en' | 'hi';
+export type Language = 'en' | 'hi' | 'sat';
 
 export const translations = {
   en: {
@@ -71,6 +71,7 @@ export const translations = {
     language: 'Language',
     english: 'English',
     hindi: 'हिन्दी',
+    santali: 'ᱥᱟᱱᱛᱟᱲᱤ',
     // AR
     ar_title: 'AR Mode',
     ar_enable: 'Enable AR Camera',
@@ -145,6 +146,7 @@ export const translations = {
     language: 'भाषा',
     english: 'English',
     hindi: 'हिन्दी',
+    santali: 'ᱥᱟᱱᱛᱟᱲᱤ',
     ar_title: 'AR मोड',
     ar_enable: 'AR कैमरा सक्षम करें',
     ar_fallback: '3D सिमुलेशन मोड',
@@ -155,11 +157,101 @@ export const translations = {
     view_all: 'सब देखें',
     loading: 'लोड हो रहा है...',
   },
+  sat: {
+    nav_home: 'ᱚᱲᱟᱜ',
+    nav_training: 'ᱪᱮᱫᱚᱜ',
+    nav_assessment: 'ᱵᱤᱰᱟᱹᱣ',
+    nav_dashboard: 'ᱰᱮᱥᱵᱳᱨᱰ',
+    nav_start_training: 'ᱪᱮᱫᱚᱜ ᱮᱦᱚᱵᱽ',
+    hero_badge: 'SIH 2026 · ᱫᱟᱹᱵᱤ ᱒᱖᱐᱔᱑',
+    hero_headline: 'ᱨᱩᱠᱷᱤᱭᱟᱹ ᱛᱮ ᱪᱮᱫᱚᱜ ᱢᱮ।',
+    hero_headline2: 'ᱥᱟᱹᱨᱤ ᱦᱩᱱᱟᱹᱨ ᱪᱮᱫᱚᱜ ᱢᱮ।',
+    hero_subtext: 'ᱠᱷᱟᱫᱟᱱ, ᱤᱥᱯᱟᱛ ᱟᱨ ᱠᱟᱹᱨᱠᱷᱟᱱᱟ ᱠᱟᱹᱢᱤᱭᱟᱹ ᱠᱚ ᱞᱟᱹᱜᱤᱫ AR-ᱛᱮ ᱥᱮᱪᱮᱫ। ᱵᱤᱱᱟᱹ ᱡᱟ platform ᱨᱮ 3D Simulation ᱛᱮ ᱨᱩᱠᱷᱤᱭᱟᱹ ᱱᱤᱭᱟᱹᱢ ᱪᱮᱫᱚᱜ ᱢᱮ।',
+    hero_cta_primary: 'ᱪᱮᱫᱚᱜ ᱮᱦᱚᱵᱽ',
+    hero_cta_secondary: '3D Simulation ᱧᱮᱞ',
+    features_title: 'AR-VOCATIONAL ᱪᱮᱫᱟᱜ?',
+    modules_title: 'ᱪᱮᱫᱚᱜ ᱢᱳᱰᱤᱭᱩᱞ ᱠᱚ',
+    how_it_works: 'ᱱᱳᱣᱟ ᱪᱮᱠᱟ ᱠᱟᱹᱢᱤᱭᱟ',
+    impact_title: 'ᱡᱚᱠᱷᱟ ᱯᱨᱚᱵᱷᱟᱣ',
+    training_title: 'ᱪᱮᱫᱚᱜ ᱯᱩᱛᱷᱤ ᱜᱟᱹᱲ',
+    training_subtitle: 'ᱠᱟᱹᱨᱠᱷᱟᱱᱟ ᱨᱩᱠᱷᱤᱭᱟᱹ ᱞᱟᱹᱜᱤᱫ 3D Simulation',
+    search_placeholder: 'ᱢᱳᱰᱤᱭᱩᱞ ᱯᱟᱸᱡᱟ...',
+    filter_all: 'ᱡᱚᱛᱚ',
+    difficulty: 'ᱟᱸᱴ',
+    duration: 'ᱚᱠᱛᱚ',
+    progress: 'ᱞᱟᱦᱟᱱᱛᱤ',
+    start_training: 'ᱪᱮᱫᱚᱜ ᱮᱦᱚᱵᱽ',
+    continue_training: 'ᱞᱟᱦᱟ ᱤᱫᱤ',
+    completed: 'ᱯᱩᱨᱟᱹᱣᱮᱱᱟ',
+    sim_instructions: 'ᱫᱤᱥᱟᱹ ᱪᱮᱛᱟᱱ',
+    sim_step: 'ᱫᱷᱟᱯ',
+    sim_of: 'ᱨᱮᱱᱟᱜ',
+    sim_restart: 'ᱫᱚᱦᱲᱟ ᱮᱦᱚᱵᱽ',
+    sim_next: 'ᱤᱱᱟᱹ ᱛᱟᱭᱚᱢ ᱫᱷᱟᱯ',
+    sim_complete: 'ᱯᱩᱨᱟᱹᱣᱮᱱᱟ!',
+    sim_feedback_correct: '✓ ᱥᱟᱹᱨᱤ ᱜᱮᱭᱟ! ᱟᱹᱰᱤ ᱱᱟᱯᱟᱭ।',
+    sim_feedback_incorrect: '✗ ᱵᱷᱩᱞ ᱜᱮᱭᱟ। ᱟᱨᱦᱚᱸ ᱠᱩᱨᱩᱢᱩᱴᱩᱭ ᱢᱮ।',
+    sim_disclaimer: 'ᱱᱳᱣᱟ ᱥᱤᱢᱩᱞᱮᱥᱚᱱ ᱫᱚ ᱥᱮᱪᱮᱫ ᱞᱟᱹᱜᱤᱫ ᱠᱟᱱᱟ ᱟᱨ ᱥᱟᱹᱨᱤ ᱨᱩᱠᱷᱤᱭᱟᱹ ᱴᱨᱮᱱᱤᱝ ᱨᱮᱱᱟᱜ ᱴᱷᱟᱶ ᱫᱚ ᱵᱟᱝ ᱟ dirty ᱭᱟ।',
+    assessment_title: 'ᱨᱩᱠᱷᱤᱭᱟᱹ ᱵᱤᱰᱟᱹᱣ',
+    assessment_subtitle: 'ᱪᱮᱫᱚᱜ ᱢᱳᱰᱤᱭᱩᱞ ᱨᱮ ᱟᱢᱟᱜ ᱜᱽᱭᱟᱱ ᱵᱤᱰᱟᱹᱣ ᱢᱮ',
+    question: 'ᱠᱩᱠᱞᱤ',
+    submit_answer: 'ᱛᱮᱞᱟ ᱮᱢ',
+    next_question: 'ᱤᱱᱟᱹ ᱛᱟᱭᱚᱢ ᱠᱩᱠᱞᱤ',
+    finish: 'ᱵᱤᱰᱟᱹᱣ ᱢᱩᱪᱟᱹᱫ',
+    retry: 'ᱟᱨᱦᱚᱸ ᱠᱩᱨᱩᱢᱩᱴᱩ',
+    score: 'ᱟᱢᱟᱜ ᱱᱚᱢᱵᱚᱨ',
+    passed: 'ᱯᱟᱥ ᱮᱱᱟᱢ!',
+    failed: 'ᱟᱨᱦᱚᱸ ᱪᱮᱥᱴᱟᱭ ᱢᱮ',
+    correct: 'ᱥᱟᱹᱨᱤ',
+    incorrect: 'ᱵᱷᱩᱞ',
+    explanation: 'ᱵᱤᱣᱨᱚᱱ',
+    pass_threshold: 'ᱯᱟᱥ ᱱᱚᱢᱵᱚᱨ: 70%',
+    dashboard_title: 'ᱪᱮᱫᱚᱜ ᱰᱮᱥᱵᱳᱨᱰ',
+    dashboard_subtitle: 'ᱟᱢᱟᱜ ᱴᱨᱮᱱᱤᱝ ᱞᱟᱦᱟᱱᱛᱤ ᱧᱮᱞ ᱢᱮ',
+    modules_completed: 'ᱯᱩᱨᱟᱹᱣ ᱢᱳᱰᱤᱭᱩᱞ',
+    in_progress: 'ᱪᱟᱞᱟᱜ ᱠᱟᱱᱟ',
+    avg_score: 'ᱚᱣᱥᱚᱛ ᱱᱚᱢᱵᱚᱨ',
+    overall_progress: 'ᱡᱚᱛᱚ ᱞᱟᱦᱟᱱᱛᱤ',
+    recent_activity: 'ᱱᱤᱛᱚᱜᱟᱜ ᱠᱟᱹᱢᱤ',
+    recommended: 'ᱥᱟᱞᱟᱜ ᱟᱠᱟᱱ ᱞᱟᱦᱟ',
+    certificate_eligible: 'ᱥᱟᱨᱴᱤᱯᱷᱤᱠᱮᱴ ᱞᱟᱹᱜᱤᱫ ᱞᱟᱹᱭᱠ',
+    no_activity: 'ᱱᱤᱛᱚᱜ ᱫᱷᱟᱹᱵᱤᱡ ᱪᱮᱫ ᱦᱚᱸ ᱵᱟᱹᱱᱩᱜᱼᱟ। ᱪᱮᱫᱚᱜ ᱮᱦᱚᱵᱽ ᱢᱮ!',
+    language: 'ᱯᱟᱹᱨᱥᱤ',
+    english: 'English',
+    hindi: 'हिन्दी',
+    santali: 'ᱥᱟᱱᱛᱟᱲᱤ',
+    ar_title: 'AR ᱢᱳᱰ',
+    ar_enable: 'AR ᱠᱮᱢᱨᱟ ᱪᱟᱹᱞᱩ',
+    ar_fallback: '3D Simulation ᱢᱳᱰ',
+    ar_not_supported: 'ᱱᱳᱣᱟ ᱰᱤᱵᱷᱟᱭᱤᱥ ᱨᱮ AR ᱵᱟᱝ ᱪᱟᱞᱟᱜᱼᱟ — 3D ᱢᱳᱰ ᱵᱮᱣᱦᱟᱨᱚᱜ ᱠᱟᱱᱟ।',
+    ar_permission: 'AR ᱢᱳᱰ ᱞᱟᱹᱜᱤᱫ ᱠᱮᱢᱨᱟ ᱚᱱᱩᱢᱚᱛᱤ ᱞᱟᱹᱠᱛᱤᱭᱟ।',
+    minutes: 'ᱢᱤᱱᱤᱴ',
+    back: 'ᱨᱩᱣᱟᱹᱲ',
+    view_all: 'ᱡᱚᱛᱚ ᱧᱮᱞ',
+    loading: 'ᱞᱳᱰᱚᱜ ᱠᱟᱱᱟ...',
+  },
 } as const;
 
 export type TranslationKey = keyof typeof translations.en;
 
 export function useTranslations(lang: Language) {
-  const t = translations[lang];
+  const t = translations[lang] ?? translations.en;
   return (key: TranslationKey): string => t[key] ?? translations.en[key] ?? key;
+}
+
+export function getLocalizedText<T extends Record<string, any>>(
+  lang: Language,
+  item: T,
+  baseKey: string
+): any {
+  if (!item) return '';
+  if (lang === 'sat') {
+    const satKey = `${baseKey}Sat`;
+    if (item[satKey]) return item[satKey];
+  }
+  if (lang === 'hi') {
+    const hiKey = `${baseKey}Hi`;
+    if (item[hiKey]) return item[hiKey];
+  }
+  return item[baseKey];
 }

@@ -2,17 +2,19 @@
 
 export type Difficulty = 'Beginner' | 'Intermediate' | 'Advanced';
 export type ModuleCategory = 'Fire Safety' | 'Mining' | 'Emergency' | 'General Safety';
-export type Language = 'en' | 'hi';
+export type Language = 'en' | 'hi' | 'sat';
 
 export interface TrainingModule {
   id: string;
   title: string;
   titleHi: string;
+  titleSat?: string;
   category: ModuleCategory;
   difficulty: Difficulty;
   duration: number; // minutes
   description: string;
   descriptionHi: string;
+  descriptionSat?: string;
   route: string;
   completed: boolean;
   progress: number; // 0-100
@@ -24,8 +26,10 @@ export interface SimulationStep {
   id: number;
   instruction: string;
   instructionHi: string;
+  instructionSat?: string;
   hint?: string;
   hintHi?: string;
+  hintSat?: string;
   action: string; // what the user needs to do
   isCompleted: boolean;
 }
@@ -35,11 +39,14 @@ export interface AssessmentQuestion {
   moduleId: string;
   question: string;
   questionHi: string;
+  questionSat?: string;
   options: string[];
   optionsHi: string[];
+  optionsSat?: string[];
   correctIndex: number;
   explanation: string;
   explanationHi: string;
+  explanationSat?: string;
 }
 
 export interface AssessmentAttempt {
@@ -97,8 +104,10 @@ export interface HazardItem {
   id: string;
   label: string;
   labelHi: string;
+  labelSat?: string;
   description: string;
   descriptionHi: string;
+  descriptionSat?: string;
   isHazard: boolean;
   position: [number, number, number];
   color: string;

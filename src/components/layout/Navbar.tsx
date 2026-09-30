@@ -81,20 +81,21 @@ export default function Navbar() {
               }}
             >
               <Globe size={14} />
-              {lang === 'en' ? 'EN' : 'HI'}
+              {lang === 'en' ? 'EN' : lang === 'hi' ? 'HI' : 'SAT'}
               <ChevronDown size={12} />
             </button>
             {langOpen && (
               <div style={{
                 position: 'absolute', top: 'calc(100% + 8px)', right: 0,
                 background: '#141c2e', border: '1px solid #1e2d4a', borderRadius: 10,
-                overflow: 'hidden', zIndex: 200, minWidth: 130,
+                overflow: 'hidden', zIndex: 200, minWidth: 150,
                 boxShadow: '0 8px 32px rgba(0,0,0,0.4)',
               }}>
                 {[
-                  { code: 'en' as const, label: 'English', sublabel: 'English' },
-                  { code: 'hi' as const, label: 'हिन्दी', sublabel: 'Hindi' },
-                ].map(({ code, label, sublabel }) => (
+                  { code: 'en' as const, label: 'English', sublabel: 'English', flag: '🇬🇧' },
+                  { code: 'hi' as const, label: 'हिन्दी', sublabel: 'Hindi', flag: '🇮🇳' },
+                  { code: 'sat' as const, label: 'ᱥᱟᱱᱛᱟᱲᱤ', sublabel: 'Santali', flag: '🏹' },
+                ].map(({ code, label, sublabel, flag }) => (
                   <button
                     key={code}
                     onClick={() => { setLang(code); setLangOpen(false); }}
@@ -105,7 +106,7 @@ export default function Navbar() {
                       fontFamily: 'Inter, sans-serif', display: 'flex', alignItems: 'center', gap: 8,
                     }}
                   >
-                    <span style={{ fontSize: '1rem' }}>{code === 'en' ? '🇬🇧' : '🇮🇳'}</span>
+                    <span style={{ fontSize: '1rem' }}>{flag}</span>
                     <div>
                       <div style={{ fontWeight: 600 }}>{label}</div>
                       <div style={{ fontSize: '0.7rem', opacity: 0.6 }}>{sublabel}</div>

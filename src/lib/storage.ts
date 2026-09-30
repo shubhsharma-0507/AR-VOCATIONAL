@@ -1,5 +1,5 @@
 // Local storage utility for persisting user progress
-import { UserProgress, AssessmentAttempt, SimulationAttempt, ActivityItem } from '@/types';
+import { UserProgress, AssessmentAttempt, SimulationAttempt, ActivityItem, Language } from '@/types';
 
 const STORAGE_KEYS = {
   PROGRESS: 'arv_progress',
@@ -146,10 +146,10 @@ export function getDashboardStats() {
 }
 
 // Language
-export function getLanguage(): 'en' | 'hi' {
-  return (storage.get(STORAGE_KEYS.LANGUAGE) as 'en' | 'hi') ?? 'en';
+export function getLanguage(): Language {
+  return (storage.get(STORAGE_KEYS.LANGUAGE) as Language) ?? 'en';
 }
 
-export function setLanguage(lang: 'en' | 'hi'): void {
+export function setLanguage(lang: Language): void {
   storage.set(STORAGE_KEYS.LANGUAGE, lang);
 }
